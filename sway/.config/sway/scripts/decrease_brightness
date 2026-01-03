@@ -1,0 +1,18 @@
+#!/bin/sh
+
+export BRIGHTNESS=`brightnessctl g`
+if [ $BRIGHTNESS -gt 0 ]; then
+    brightnessctl set 5%-
+else
+    killall gammastep &> /dev/null
+
+    export BRIGHTNESS=`cat /tmp/brightness 2> /dev/null || echo 1` 
+    if [ `echo "$BRIGHTNESS > 0.1" | bc -l` == 1 ]; then
+        export BRIGHTNESS=`echo "$BRIGHTNESS - 0.1" | bc`
+        echo $BRIGHTNESS > /tmp/brightness
+        gammastep -O 6500 -b $BRIGHTNESS:0.1 &
+    else
+        gammastep -O 6500 -b 0.1:0.1 &
+    fi
+fi
+
