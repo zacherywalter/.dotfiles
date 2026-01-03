@@ -6,7 +6,7 @@ based on the setup [here](https://github.com/antsouchlos/dotfiles) from antsouch
 ## Usage
 
 ```bash
-$ stow -S sway
+$ stow -S sway waybar zsh
 ```
 future packages to configure
-# $ stow -S clang-format flashfocus kitty nvim sway tmux waybar wofi zathura zsh
+$ stow -S clang-format flashfocus kitty nvim tmux wofi zathura 
