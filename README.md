@@ -6,7 +6,7 @@ waybar inspired by [waybar-macos-sequoia](https://github.com/kamlendras/waybar-m
 ## Usage
 
 ```bash
-$ stow -S sway waybar zsh kitty
+$ stow -S sway waybar zsh kitty tmux
 ```
 future packages to configure
-$ stow -S clang-format flashfocus nvim tmux wofi zathura 
+- clang-format flashfocus nvim tmux wofi zathura 
