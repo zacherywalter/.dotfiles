@@ -59,7 +59,7 @@ alias ...="cd ../.."
 # source /usr/share/fzf/key-bindings.zsh
 # source /usr/share/fzf/completion.zsh
 
-# . "/usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
+. "/usr/share//zsh-autosuggestions/zsh-autosuggestions.zsh"
 bindkey '^l' autosuggest-accept
 
 eval "$(zoxide init zsh)"
