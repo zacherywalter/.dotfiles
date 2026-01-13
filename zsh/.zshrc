@@ -64,3 +64,6 @@ bindkey '^l' autosuggest-accept
 
 eval "$(zoxide init zsh)"
 # eval "$(thefuck --alias)"
+
+# homebrew install from brew.sh
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv zsh)"
