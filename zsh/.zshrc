@@ -44,7 +44,7 @@ alias s='kitten ssh'
 alias ucharging='upower -i /org/freedesktop/UPower/device/battery_BAT0'
 
 # alias ssh='kitty +kitten ssh'
-
+alias vim='nvim'
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias ll='ls -l'
