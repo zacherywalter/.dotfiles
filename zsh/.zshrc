@@ -44,13 +44,14 @@ alias s='ssh'
 alias ucharging='upower -i /org/freedesktop/UPower/device/battery_BAT0'
 
 # alias ssh='kitty +kitten ssh'
-alias ma='cd ~/Nextcloud/CEL_MA/'
+alias ma='cd ~/Nextcloud/CEL_MA/ && cd '
 
 alias v='nvim'
-alias zshrc='vim ~/.dotfiles/zsh/.zshrc'
-alias vimrc='vim ~/.vimrc'
-alias howto='vim ~/howto/README.md'
+alias zshrc='v ~/.dotfiles/zsh/.zshrc'
+alias vimrc='v ~/.vimrc'
+alias howto='v ~/howto/README.md'
 alias search='grep -winr ~/howto/*.md -e'
+alias cel='ssh cel -t "ruptime2"'
 
 alias md='ebook-viewer --detach --new-instance %f '  # from calibre
 alias ls='ls --color=auto'
@@ -60,6 +61,7 @@ alias la='ls -la'
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
+# alias ~="cd ~" don't need this: just type cd
 
 #
 # Interfacing with other programs
@@ -77,6 +79,26 @@ eval "$(zoxide init zsh)"
 # homebrew install from brew.sh
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv zsh)"
 
+# >>> mamba initialize >>>
+# !! Contents within this block are managed by 'mamba shell init' !!
+export MAMBA_EXE='/home/zachery/miniforge3/bin/mamba';
+export MAMBA_ROOT_PREFIX='/home/zachery/miniforge3';
+__mamba_setup="$("$MAMBA_EXE" shell hook --shell zsh --root-prefix "$MAMBA_ROOT_PREFIX" 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__mamba_setup"
+else
+    alias mamba="$MAMBA_EXE"  # Fallback on help from mamba activate
+fi
+unset __mamba_setup
+# <<< mamba initialize <<<
+
+[ -f "/home/zachery/.ghcup/env" ] && . "/home/zachery/.ghcup/env" # ghcup-env
+
+# export PYENV_ROOT="$HOME/.pyenv"
+# [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+# eval "$(pyenv init - zsh)"
+
+#
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/home/zachery/miniforge3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
@@ -93,17 +115,4 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 
-# >>> mamba initialize >>>
-# !! Contents within this block are managed by 'mamba shell init' !!
-export MAMBA_EXE='/home/zachery/miniforge3/bin/mamba';
-export MAMBA_ROOT_PREFIX='/home/zachery/miniforge3';
-__mamba_setup="$("$MAMBA_EXE" shell hook --shell zsh --root-prefix "$MAMBA_ROOT_PREFIX" 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__mamba_setup"
-else
-    alias mamba="$MAMBA_EXE"  # Fallback on help from mamba activate
-fi
-unset __mamba_setup
-# <<< mamba initialize <<<
 
-[ -f "/home/zachery/.ghcup/env" ] && . "/home/zachery/.ghcup/env" # ghcup-env
