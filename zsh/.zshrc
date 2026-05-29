@@ -62,6 +62,7 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 
+# git lazy push
 alias lpush="git status && git add . && git commit -m \"same same\" && git push"
 # alias ~="cd ~" don't need this: just type cd
 
