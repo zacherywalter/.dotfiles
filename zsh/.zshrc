@@ -61,6 +61,8 @@ alias la='ls -la'
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
+
+alias lpush="git status && git add . && git commit -m \"same same\" && git push"
 # alias ~="cd ~" don't need this: just type cd
 
 #
@@ -69,6 +71,8 @@ alias ....="cd ../../.."
 
 # source /usr/share/fzf/key-bindings.zsh
 # source /usr/share/fzf/completion.zsh
+source /usr/share/doc/fzf/examples/completion.zsh
+source /usr/share/doc/fzf/examples/key-bindings.zsh
 
 . "/usr/share//zsh-autosuggestions/zsh-autosuggestions.zsh"
 bindkey '^l' autosuggest-accept
@@ -115,4 +119,6 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 
-
+export PATH=$PATH:/home/zachery/scripts  # add scripts to path
+alias syn='synonym'
+alias def='define'
