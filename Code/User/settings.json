@@ -1,0 +1,41 @@
+{
+    "keyboard.dispatch": "keyCode",
+    "github.copilot.enable": {
+        "*": false,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false,
+        "python": false,
+        "cpp": false
+    },
+    "github.copilot.nextEditSuggestions.enabled": false,
+    "editor.lineNumbers": "relative",
+    "terminul.integrated.inheritEnv": false,
+    "notebook.lineNumbers": "on",
+    "terminal.integrated.inheritEnv": false,
+    "jupyter.debugJustMyCode": false,
+    "debugpy.debugJustMyCode": false,
+    "explorer.confirmDragAndDrop": false,
+    "python.analysis.typeCheckingMode": "basic",
+    "debug.allowBreakpointsEverywhere": true,
+    "explorer.confirmPasteNative": false,
+    "workbench.colorTheme": "Light Modern",
+    "window.autoDetectColorScheme": true,
+    "explorer.confirmDelete": false,
+
+    "latex-workshop.formatting.latex": "tex-fmt",
+    "latex-workshop.format.fixQuotes.enabled": true,
+    //latex-workshop syncTex
+    "latex-workshop.synctex.synctexjs.enabled": true,
+    "latex-workshop.synctex.afterBuild.enabled": true,
+    "latex-workshop.view.pdf.viewer": "tab",
+    
+    "vim.handleKeys": {
+        "<C-w>": false
+    },
+    "terminal.integrated.scrollback": 10000,
+    "claudeCode.preferredLocation": "panel",
+
+}
+
+
