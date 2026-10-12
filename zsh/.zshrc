@@ -46,7 +46,7 @@ alias ucharging='upower -i /org/freedesktop/UPower/device/battery_BAT0'
 # alias ssh='kitty +kitten ssh'
 alias ma='cd ~/Nextcloud/CEL_MA/ && cd '
 
-alias v='nvim'
+alias v='vim'
 alias zshrc='v ~/.dotfiles/zsh/.zshrc'
 alias vimrc='v ~/.vimrc'
 alias howto='v ~/howto/README.md'
@@ -120,6 +120,6 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 
-export PATH=$PATH:/home/zachery/scripts  # add scripts to path
+export PATH=$PATH:~/scripts  # add scripts to path
 alias syn='synonym'
 alias def='define'
