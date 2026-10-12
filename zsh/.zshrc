@@ -60,10 +60,17 @@ alias ll='ls -l'
 alias la='ls -la'
 alias ..="cd .."
 alias ...="cd ../.."
-alias ....="cd ../../.."
 
 # git lazy push
 alias lpush="git status && git add . && git commit -m \"same same\" && git push"
+gitget() {
+    if [ -z "$1" ]; then
+        echo "Error: Please specify a repository name."
+        echo "Usage: gitget <repository_name>"
+        return 1
+    fi
+    git clone "git@github.com:zacherywalter/$1.git"
+}
 # alias ~="cd ~" don't need this: just type cd
 
 #
